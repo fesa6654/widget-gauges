@@ -11,21 +11,39 @@
 
 <script>
 export default {
-  mounted() {
-    const gaugeElement = document.querySelector(".gauge");
-
-    function setGaugeValue(gauge, value) {
+  data() {
+    return {
+      sayac: 0,
+      deger: 0,
+    };
+  },
+  methods: {
+    setGaugeValue(value) {
+      const gaugeElement = document.querySelector(".gauge");
+      const fill = gaugeElement.querySelector(".gauge__fill");
+      const cover = gaugeElement.querySelector(".gauge__cover");
       if (value < 0 || value > 1) {
         return;
       }
-      gauge.querySelector(".gauge__fill").style.transform = `rotate(${
-        value / 2
-      }turn)`;
-      gauge.querySelector(".gauge__cover").textContent = `${Math.round(
-        value * 100
-      )}%`;
-    }
-    setGaugeValue(gaugeElement, 0.2);
+      fill.style.transform = `rotate(${value / 2}turn)`;
+      cover.textContent = `${Math.round(value * 100)}%`;
+    },
+    start() {
+      this.$store.state.inter = setInterval(() => {
+        this.deger = this.deger * 10;
+        this.sayac++;
+        this.deger++;
+        if (this.sayac == 11) {
+          this.sayac = 0;
+          this.deger = 0;
+        }
+        this.deger = this.deger / 10;
+        this.setGaugeValue(this.deger);
+      }, 1500);
+    },
+  },
+  created() {
+    this.start();
   },
 };
 </script>

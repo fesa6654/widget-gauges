@@ -1,9 +1,20 @@
 <template>
-  <div>about page</div>
+  <div>
+    <Circular-Bar></Circular-Bar>
+  </div>
 </template>
 
 <script>
-export default {};
+import CircularBar from "../components/CircularBar";
+
+export default {
+  components: {
+    CircularBar,
+  },
+  created() {
+    clearInterval(this.$store.state.inter);
+  },
+};
 </script>
 
 <style>

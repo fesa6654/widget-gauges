@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Gauge from "./Gauge.vue";
+import Gauge from "../components/Gauge";
 
 export default {
   name: "Home",
