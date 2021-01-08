@@ -19,9 +19,9 @@ export default {
   },
   methods: {
     setGaugeValue(value) {
-      const gaugeElement = document.querySelector(".gauge");
-      const fill = gaugeElement.querySelector(".gauge__fill");
-      const cover = gaugeElement.querySelector(".gauge__cover");
+      //const gaugeElement = document.querySelector(".gauge");
+      const fill = document.querySelector(".gauge__fill");
+      const cover = document.querySelector(".gauge__cover");
       if (value < 0 || value > 1) {
         return;
       }
@@ -42,7 +42,7 @@ export default {
       }, 1500);
     },
   },
-  created() {
+  mounted() {
     this.start();
   },
 };

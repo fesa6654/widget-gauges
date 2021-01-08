@@ -22,17 +22,19 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      numb: 0
+    };
   },
   methods: {
     //stroke-dashoffset: calc(440 - (440 * 90) / 100);
     circularBar() {
       const cont = document.querySelector(".svgs");
       //const perc = cont.querySelector(".svgs");
-      //newbars.style.strokeDashoffset = "calc(440 - (440 * 90) / 100);";
+      cont.style.strokeDashoffset = "calc(440 - (440 * 90) / 100);";
     },
   },
-  created() {
+  mounted() {
     this.circularBar();
   },
 };

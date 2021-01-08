@@ -12,6 +12,9 @@ export default {
   components: {
     Gauge,
   },
+  mounted() {
+    clearInterval(this.$store.state.inter2);
+  },
 };
 </script>
 

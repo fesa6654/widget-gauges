@@ -1,19 +1,18 @@
 <template>
   <div>
-    <Circular-Bar></Circular-Bar>
+    <Digital-Gauge></Digital-Gauge>
   </div>
 </template>
 
 <script>
-import CircularBar from "../components/CircularBar";
+import DigitalGauge from "../components/VerticalDigitalGauge";
 
 export default {
   components: {
-    CircularBar,
+    DigitalGauge,
   },
   mounted() {
     clearInterval(this.$store.state.inter);
-    clearInterval(this.$store.state.inter2);
   },
 };
 </script>

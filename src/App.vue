@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">Cicular Bar</router-link>
+      <router-link to="/about">Cicular Bar</router-link> |
+      <router-link to="/digitalgauge">Digital Gauge</router-link>
     </div>
     <router-view />
   </div>
