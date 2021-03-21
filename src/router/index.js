@@ -11,6 +11,16 @@ const routes = [
     component: Home
   },
   {
+    path: '/ibreli-gauge',
+    name: 'IbreliGauge',
+    component: () => import('../views/IbreliGauge.vue')
+  },
+  {
+    path: '/gauge',
+    name: 'Gauge',
+    component: () => import('../views/Gauge.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
