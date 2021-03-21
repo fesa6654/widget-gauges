@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Gauge></Gauge>
+    <Gauge :max="100" :min="-60" :data="deger" color="red"></Gauge>
   </div>
 </template>
 
@@ -12,8 +12,21 @@ export default {
   components: {
     Gauge,
   },
-  mounted() {
-    clearInterval(this.$store.state.inter2);
+  data() {
+    return {
+      sayac: 0,
+      deger: 0
+    }
+  },
+  methods: {
+    start() {
+      this.$store.state.inter = setInterval(() => {
+        this.deger = this.deger + 20;
+      }, 1000);
+    },
+  },
+  created() {
+    this.start();
   },
 };
 </script>
