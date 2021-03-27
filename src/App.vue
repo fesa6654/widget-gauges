@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
+      <router-link to="/slider">Slider</router-link> |
       <router-link to="/ibreli-gauge">Limit Gauge</router-link> |
       <router-link to="/gauge">Gauge</router-link> |
       <router-link to="/about">Cicular Bar</router-link> |

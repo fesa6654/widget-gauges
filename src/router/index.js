@@ -11,6 +11,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/slider',
+    name: 'Slider',
+    component: () => import('../views/Slider.vue')
+  },
+  {
     path: '/ibreli-gauge',
     name: 'IbreliGauge',
     component: () => import('../views/IbreliGauge.vue')
